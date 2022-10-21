@@ -1,15 +1,6 @@
 pipeline {
-    agent {
-	label 'docker-agent'
-    }
+    agent any
     stages {
-       stage ('Installing docker') {
-          steps {
-              sh 'sudo apt-get update'
-	      sh 'sudo apt install docker.io -y'
-          }
-       }
-
        stage ('Building Docker image form docker file') {
           steps {
               sh 'docker build -f Dockerfile -t spring-app:0.2.1 .'
