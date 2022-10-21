@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-	label 'Built-in Node'
-}
+    agent any
     stages {
        stage ('Building Docker image form docker file') {
           steps {
