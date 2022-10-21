@@ -1,6 +1,6 @@
 pipeline {
     agent {
-	lable 'docker-agent'
+	label 'docker-agent'
 }
     stages {
        stage ('Building Docker image form docker file') {
