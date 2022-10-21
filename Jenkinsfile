@@ -6,13 +6,13 @@ pipeline {
        stage ('Building Docker image form docker file') {
           steps {
 	      script{
-              sh 'docker build -t spring-app:0.2.1 .'
+              sh 'sudo docker build -t spring-app:0.2.1 .'
 		}
           }
        }
        stage ('Listing docker image') {
           steps {
-              sh 'docker images'
+              sh ' sudo docker images'
           }
        }
        stage ('Building docker container using docker image') {
