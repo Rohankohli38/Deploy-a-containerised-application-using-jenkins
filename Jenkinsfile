@@ -1,8 +1,11 @@
 pipeline {
-    agent any
+    agent {
+	lable 'docker-agent'
+}
     stages {
        stage ('Building Docker image form docker file') {
           steps {
+	      sh 'cd '
               sh 'docker build -f Dockerfile -t spring-app:0.2.1 .'
           }
        }
