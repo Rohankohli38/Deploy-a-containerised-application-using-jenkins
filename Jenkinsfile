@@ -3,6 +3,11 @@ pipeline {
 	label 'docker-agent'
 }
     stages {
+       stage ('creating jar file') {
+          steps {
+              sh 'mvn clean install'
+                }
+          }
        stage ('Building Docker image form docker file') {
           steps {
 	      script{
