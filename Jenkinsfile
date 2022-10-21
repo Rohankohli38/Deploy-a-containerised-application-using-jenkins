@@ -12,7 +12,7 @@ pipeline {
 
        stage ('Building Docker image form docker file') {
           steps {
-              sh 'docker build -t spring-app:0.2.1 .'
+              sh 'docker build -f Dockerfile -t spring-app:0.2.1 .'
           }
        }
        stage ('Listing docker image') {
