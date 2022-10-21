@@ -22,7 +22,7 @@ pipeline {
        }
        stage ('Building docker container using docker image') {
           steps {
-              sh 'docker run -d -p 8080:8085 spring-app:0.2.1'
+              sh 'sudo docker run -d -p 8080:8085 spring-app:0.2.1'
           }
        }
    }  
