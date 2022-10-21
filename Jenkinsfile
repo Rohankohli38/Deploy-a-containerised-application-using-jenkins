@@ -6,7 +6,7 @@ pipeline {
        stage ('Installing docker') {
           steps {
               sh 'sudo apt-get update'
-	      sh 'sudo apt install docker.io'
+	      sh 'sudo apt install docker.io -y'
           }
        }
 
